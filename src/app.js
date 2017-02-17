@@ -1,3 +1,5 @@
+//------------SCROLLING--------------//
+
 const scrollDiv = document.querySelector('.scroll');
 const scrollImg = document.querySelector('.scrollImg');
 
@@ -11,34 +13,45 @@ scrollDiv.addEventListener('mouseleave', function(e){
   scrollImg.src = 'src/images/next.png';
 });
 
-// var slide1 = document.querySelector('.slide1');
-// var slide1Top = slide1.getBoundingClientRect().top;
-// var slide1Bottom = slide1.getBoundingClientRect().bottom;
-// var slide1Visible = (slide1Top >=0) && (slide1Bottom <= window.innerHeight);
-//
-// var slide2 = document.querySelector('.slide2');
-// var slide2Top = slide2.getBoundingClientRect().top;
-// var slide2Bottom = slide2.getBoundingClientRect().bottom;
-// var slide2Visible = (slide2Top >=0) && (slide2Bottom <= window.innerHeight);
-//
-// var slide3 = document.querySelector('.slide3');
-// var slide3Top = slide3.getBoundingClientRect().top;
-// var slide3Bottom = slide3.getBoundingClientRect().bottom;
-// var slide3Visible = (slide3Top >=0) && (slide3Bottom <= window.innerHeight);
-
 scrollDiv.addEventListener('click', function(e){
   window.scrollBy(0, window.innerHeight);
 });
 
+//------------TIMER--------------//
+let countdown;
+let date = 'September 02 2017 18:59:59 GMT-0800';
+initializeClock(date);
 
+function getTimeLeft(date){
+  const total = Date.parse(date) - Date.now();
+  let seconds = Math.floor((total/1000) % 60);
+  let minutes = Math.floor((total/1000/60) % 60);
+  let hours = Math.floor((total/(1000*60*60)) % 24);
+  var days = Math.floor(total/(1000*60*60*24));
 
-function isScrolledIntoView(el) {
-    var elemTop = el.getBoundingClientRect().top;
-    var elemBottom = el.getBoundingClientRect().bottom;
-
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    return isVisible;
+  return {
+    'total': total,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
 }
 
-
-//slide2.scrollIntoView()
+function initializeClock(date) {
+  let clock = document.getElementById('clockdiv');
+  let daysSpan = clock.querySelector('.daysH2');
+  let hoursSpan = clock.querySelector('.hoursH2');
+  let minutesSpan = clock.querySelector('.minutesH2');
+  let secondsSpan = clock.querySelector('.secondsH2');
+  let timeInterval = setInterval(function(){
+    let total = getTimeLeft(date);
+    daysSpan.innerHTML = total.days;
+    hoursSpan.innerHTML = ('0' + total.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + total.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + total.seconds).slice(-2);
+    if(total.hours <= 0){
+      clearInterval(timeInterval);
+    }
+  }, 1000);
+}

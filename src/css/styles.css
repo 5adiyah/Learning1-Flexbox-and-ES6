@@ -6,17 +6,38 @@
    --greyColor: #E6E6E6;
 }
 
+.white {
+  color: #fff;
+}
+.darkBlue {
+  color: #013038;
+}
+.blue {
+  color: var(--blueColor);
+}
+.red {
+  color: var(--redColor);
+}
+.yellow {
+  color: var(--yellowColor);
+}
+.green {
+  color: #599957;
+}
+
+
+
 /*font-family: 'Pacifico', cursive;*/
 
 @font-face {
     font-family: 'BlanchCaps';
-    src: url('fonts/BLANCH_CONDENSED_INLINE.otf');
+    src: url('../../src/fonts/BLANCH_CONDENSED_INLINE.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'BlanchCapsLight';
-    src: url('fonts/BLANCH_CONDENSED_LIGHT.otf');
+    src: url('../../src/fonts/BLANCH_CONDENSED_LIGHT.otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,6 +63,14 @@ body{
 
 .content{
   background-color: var(--yellowColor);
+}
+
+.content h2{
+  font-family: 'BlanchCaps';
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 150px;
 }
 
 .footer{
@@ -90,4 +119,18 @@ body{
 
 .scrollHover img{
   opacity: 0.7;
+}
+
+#clockdiv{
+  display: flex;
+  justify-content: center;
+}
+
+.counterNum {
+  flex: 0.1;
+}
+
+.counterNum h2{
+  padding: 0;
+  margin: 0;
 }
