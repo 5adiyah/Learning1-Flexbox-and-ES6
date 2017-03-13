@@ -1,9 +1,11 @@
 :root{
-   --greenColor: #ABDDC6;
+   --greenColor: #5DA271;
    --redColor: #DC4F53;
    --yellowColor: #F8CA69;
    --blueColor: #008AA0;
    --greyColor: #E6E6E6;
+   --purpleColor: #7e85ce;
+   --brownColor: #D8A47F;
 }
 
 .white {
@@ -26,9 +28,6 @@
 }
 
 
-
-/*font-family: 'Pacifico', cursive;*/
-
 @font-face {
     font-family: 'BlanchCaps';
     src: url('../../src/fonts/BLANCH_CONDENSED_INLINE.otf');
@@ -47,6 +46,13 @@ body{
   padding: 0;
 }
 
+
+/************************************************************************************************************/
+/***************************************************HEADER***************************************************/
+/************************************************************************************************************/
+
+
+
 .header{
   position: fixed;
   top: 0;
@@ -57,25 +63,29 @@ body{
   z-index: 1;
 }
 
-.home{
-  background-color: var(--blueColor);
-}
-
-.content{
-  background-color: var(--yellowColor);
-}
-
-.content h2{
-  font-family: 'BlanchCaps';
-  font-size: 100px;
+ul.navigation{
+  display: block;
   text-align: center;
-  letter-spacing: 2px;
-  margin-top: 150px;
+  cursor: pointer;
 }
 
-.footer{
-  background-color: var(--redColor);
+.navigation li {
+  display: inline;
+  margin: 0 50px;
+  text-decoration: none;
+  color: white;
+  font-family: 'BlanchCaps';
+  font-size: 30px;
 }
+
+.navigation li:hover{
+  color: #666;
+}
+
+
+/***************************************************************************************************************/
+/******************************************Applies to all main Div**********************************************/
+/***************************************************************************************************************/
 
 .container{
   display: flex;
@@ -86,7 +96,279 @@ body{
   padding-top: 60px;
   min-height: calc(100vh - 60px);
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.slideContent{
+}
+
+
+/***************************************************************************************************************/
+/****************************************************Home Div***************************************************/
+/***************************************************************************************************************/
+
+
+.home{
+  background-color: var(--blueColor);
+}
+
+.ourName{
+  /*font-family: 'BlanchCaps';*/
+  font-family: 'Pacifico', 'PacificoRegular', cursive;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: -10px;
+}
+
+.ourDate{
+  background-color: #fff;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: -60px;
+}
+
+.ourDate h3 {
+  font-family: 'BlanchCaps';
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.clickNav{
+  font-family: 'BlanchCaps';
+  font-size: 40px;
+  text-align: center;
+  margin-top: -70px;
+  color: white;
+}
+
+.clickNav img{
+  height: 30px;
+}
+
+/***************************************************************************************************************/
+/***************************************************Countdown Div***************************************************/
+/***************************************************************************************************************/
+
+.countdownDiv{
+  background-color: var(--yellowColor);
+}
+
+.countdownDiv h2{
+  font-family: 'BlanchCaps';
+  font-size: 150px;
+  text-align: center;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin: 0;
+  /*padding-bottom: 0;*/
+}
+
+.countdownDiv p{
+  font-family: 'Pacifico', 'PacificoRegular', cursive;
+  font-size: 40px;
+  color: #008AA0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.topRow{
+  display: flex;
+}
+
+.topRowItems{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clockdiv{
+  display: flex;
+  justify-content: center;
+}
+
+.counterNum {
+  flex: 0.1;
+}
+
+.counterNum h2{
+  padding: 0;
+  margin: 0;
+}
+
+/***************************************************************************************************************/
+/***************************************************Location Div***************************************************/
+/***************************************************************************************************************/
+
+.location{
+  background-color: var(--redColor);
+}
+
+.location h2{
+  font-family: 'BlanchCaps';
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin: 0;
+}
+
+.eventInfo{
+  display: flex;
+}
+
+.eventAddress{
+  flex: 1;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.eventAddress h2{
+  font-family: 'Pacifico', 'PacificoRegular', cursive;
+  font-size: 45px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.eventAddress p{
+  font-family: 'BlanchCapsLight';
+  font-size: 58px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+.eventAddress .letterSpacing{
+  letter-spacing: 0.5px;
+}
+
+.eventSchedule{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventSchedule .btn{
+  padding: 10px 95px 10px 95px;
+  margin: 10px;
+  background-color: var(--yellowColor);
+}
+
+.btn{
+  font-family: 'BlanchCaps';
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: white;
+  color: var(--redColor);
+}
+
+/***************************************************************************************************************/
+/***************************************************RSVP Div***************************************************/
+/***************************************************************************************************************/
+
+.rsvp{
+  background-color: var(--greenColor);
+}
+
+.rsvpContent{
+  width: 100%;
+  margin-top: -20px;
+}
+
+
+.rsvp h2{
+  font-family: 'BlanchCaps';
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 3px;
+  display: inline-block;
+  margin: 0;
+}
+
+.rsvp p {
+  font-family: 'Pacifico', 'PacificoRegular', cursive;
+  font-size: 40px;
+  color: var(--yellowColor);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.rsvpHere {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rsvpForm{
+  margin-right: 40px;
+}
+
+.submitForm .btn{
+  padding: 10px 20px;
+  background-color: var(--yellowColor);
+}
+
+form .row {
+  display: flex;
+  align-items: center;
+}
+
+form .row .labels{
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+
+form .row .labels h3{
+  font-family: 'BlanchCaps';
+  font-size: 40px;
+  color: white;
+  margin: 0;
+}
+
+form .row .inputs{
+  flex: 1;
+}
+
+form .row .inputs input{
+  height: 40px;
+  width: 400px;
+  margin: 10px 0;
+}
+
+/***************************************************************************************************************/
+/***************************************************Gifts Div***************************************************/
+/***************************************************************************************************************/
+
+.gifts{
+  background-color: var(--brownColor);
+}
+
+/***************************************************************************************************************/
+/***************************************************Footer Div***************************************************/
+/***************************************************************************************************************/
+
+.footer{
+  background-color: var(--greenColor);
+}
+
+/***************************************************************************************************************/
+/***************************************************Scroll Div***************************************************/
+/***************************************************************************************************************/
+
 
 .scroll{
   position: fixed;
@@ -119,18 +401,4 @@ body{
 
 .scrollHover img{
   opacity: 0.7;
-}
-
-#clockdiv{
-  display: flex;
-  justify-content: center;
-}
-
-.counterNum {
-  flex: 0.1;
-}
-
-.counterNum h2{
-  padding: 0;
-  margin: 0;
 }

@@ -8,38 +8,157 @@
   </head>
   <body>
 
-    <div class="header"></div>
+    <div class="header">
+      <ul class="navigation">
+        <li>S + O</li>
+        <li>COUNTDOWN</li>
+        <li>EVENT INFO</li>
+        <li>RSVP</li>
+        <li>GIFTS</li>
+      </ul>
+    </div>
 
     <div class="container">
-      <div class="home slide slide1">
-
-      </div>
-
-      <div class="content slide slide2">
-        <h2 class="darkBlue">Countdown with us...</h2>
-        <div id="clockdiv">
-          <div class="counterNum days">
-            <h2 class="daysH2 red"></h2>
-            <h3 class="red">&nbsp; &nbsp; Days</h3>
+      <div class="home slide">
+        <div class="slideContent">
+          <h2 class="ourName white">Sadiyah & Omar</h2>
+          <div class="ourDate">
+            <h3 class="blue">08|19|2017</h3>
           </div>
-          <div class="counterNum hours">
-            <h2 class="hoursH2 blue"></h2>
-            <h3 style="text-align: center;" class="blue">Hours</h3>
-          </div>
-          <div class="counterNum minutes">
-            <h2 class="minutesH2 green"></h2>
-            <h3 style="text-align: center;" class="green">Minutes</h3>
-          </div>
-          <div class="counterNum seconds">
-            <h2 class="secondsH2 white"></h2>
-            <h3 style="text-align: center;" class="white">Seconds</h3>
+          <div class="clickNav">
+            <span>CLICK</span>
+            <img src="src/images/nextWhite.png">
+            <span>BELOW</span>
           </div>
         </div>
       </div>
 
-      <div class="footer slide slide3">
-
+      <div class="countdownDiv slide">
+        <div class="slideContent">
+          <div class="topRow">
+            <div class="topRowItems">
+              <img src="src/images/leftclock.png" height="90px;" alt="">
+              <h2 class="white">&nbsp;Countdown &nbsp;</h2>
+              <img src="src/images/rightclock.png" height="90px;" alt="">
+            </div>
+          </div>
+          <p>Countdown with us...</p>
+          <div id="clockdiv">
+            <div class="counterNum days">
+              <h2 class="daysH2 red"></h2>
+              <h3 class="red">&nbsp; More Days</h3>
+            </div>
+            <div class="counterNum hours">
+              <h2 class="hoursH2 blue"></h2>
+              <h3 style="text-align: center;" class="blue">Hours</h3>
+            </div>
+            <div class="counterNum minutes">
+              <h2 class="minutesH2 green"></h2>
+              <h3 style="text-align: center;" class="green">Minutes</h3>
+            </div>
+            <div class="counterNum seconds">
+              <h2 class="secondsH2 white"></h2>
+              <h3 style="text-align: center;" class="white">Seconds</h3>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="location slide">
+        <div class="slideContent">
+          <div class="topRow">
+            <div class="topRowItems">
+              <h2 class="yellow">&#9733;</h2>
+              <h2 class="white">&nbsp; INFO & LOCATION &nbsp;</h2>
+              <h2 class="yellow">&#9733;</h2>
+            </div>
+          </div>
+          <div class="eventInfo">
+            <div class="eventAddress">
+              <h2>Mountain Park</h2>
+              <p class="letterSpacing">2 Mt Jefferson Terr</p>
+              <p>Lake Oswego, Oregon</p>
+            </div>
+            <div class="eventSchedule">
+              <a class="btn" href="#">More Info</a>
+              <a class="btn" href="#">Schedule</a>
+              <a class="btn" href="#">RSVP Here</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="rsvp slide">
+        <div class="slideContent rsvpContent">
+          <div class="topRow">
+            <div class="topRowItems">
+              <h2 class="white">&nbsp; RSVP</h2>
+              <img src="src/images/rsvp.png">
+            </div>
+          </div>
+
+          <p>Tell us if you're coming...</p>
+
+          <div class="rsvpHere">
+            <div class="rsvpForm">
+              <form class="form" method="post" >
+                <div class="row">
+                  <div class="labels">
+                    <label for="firstName">
+                      <h3>FIRST NAME</h3>
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="text" name="firstName" id="firstName" value="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="labels">
+                    <label for="lastName">
+                      <h3>LAST NAME</h3>
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="text" name="lastName" id="lastName" value="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="labels">
+                    <label for="email">
+                      <h3>YOUR EMAIL</h3>
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="email" name="email" id="email" value="">
+                  </div>
+                </div>
+                <!-- <div class="labels">
+                  <label for="firstName">
+                    <h3>FIRST NAME</h3>
+                  </label>
+                  <label for="lastName">
+                    <h3>LAST NAME</h3>
+                  </label>
+                  <label for="email">
+                    <h3>YOUR EMAIL</h3>
+                  </label>
+                </div>
+                <div class="inputs">
+                  <input type="text" name="firstName" id="firstName" value="">
+                  <input type="text" name="lastName" id="lastName" value="">
+                  <input type="email" name="email" id="email" value="">
+                </div> -->
+              </form>
+            </div>
+            <div class="submitForm">
+              <a class="btn">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
     <div class="scroll">

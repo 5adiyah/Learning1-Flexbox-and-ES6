@@ -21,7 +21,7 @@ scrollDiv.addEventListener('click', function (e) {
 
 //------------TIMER--------------//
 var countdown = void 0;
-var date = 'September 02 2017 18:59:59 GMT-0800';
+var date = 'August 19 2017 18:59:59 GMT-0800';
 initializeClock(date);
 
 function getTimeLeft(date) {
